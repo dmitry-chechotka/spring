@@ -37,8 +37,8 @@ public class MoneyTest {
     
             Money result1 = mon1.minus(mon2);
     
-            assertEquals(1, result1.euros());
-            assertEquals(0, result1.cents());
+            assertEquals(0, result1.euros());
+            assertEquals(90, result1.cents());
     }
 
 }

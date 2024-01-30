@@ -30,11 +30,15 @@ public class Money {
 
 
 public Money plus(Money addition) {
-    // create a new Money object that has the correct worth
-    Money newMoney = new Money(this.euros + addition.euros, this.cents + addition.cents);
+    int euros = this.euros + addition.euros;
+    int cents = this.cents + addition.cents;
 
-    // return the new Money object
-    return newMoney;
+    if (cents > 100) {
+        cents -= 100;
+        euros++;
+    }
+
+    return new Money(euros, cents);
 }
 
 
